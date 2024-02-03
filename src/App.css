@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "open-sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("./OpenSans-Regular.woff2") format("woff2");
+}
+
+body {
+  background-color: #fff;
+  display: grid;
+  justify-content: center;
+  font-family: "open-sans";
+}
+
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #3b5eed; /* Blue */
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  animation: spin 1.5s linear infinite;
+}
+
+.loading {
+  margin-top: 20vmin;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.product-list {
+  display: grid;
+}
+
+.product-list .search {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.product-list .search label {
+  margin-right: 30px;
+}
+
+.product-list .search input{
+  align-content: center;
+  flex-grow: 1;
+  border: solid 3px #d1d1d1;
+  box-sizing: border-box;
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 24px;
+  outline: none;
+}
+
+.product-list .search input:focus{
+  border: solid 3px #3b5eed;
+  box-shadow: 1px 1px 8px 1px #3b5eed;
+}
+
+.product-list table {
+  border-collapse: collapse;
+}
+
+.product-list thead , .product-list tfoot{
+  color: #ffffff;
+}
+
+.product-list tbody {
+  color: #000000;
+}
+
+.product-list td {
+  /* border: 1px solid #626a80; */
+  padding: 5px 15px;
+}
+
+.product-list th{
+  padding: 15px;
+}
+
+.product-list th:first-child, .product-list tfoot td:first-child{
+  width: 300px;
+  text-align: left;
+  background-color: #3b5eed;
+  border-radius: 10px 0 0 10px;
+}
+
+.product-list th:last-child, .product-list tfoot td:last-child{
+  width: 100px;
+  text-align: right;
+  background-color: #3b5eed;
+  border-radius: 0 10px 10px 0;
+}
+
+.product-list tr:nth-child(2n) td:first-child{
+  border-radius: 10px 0 0 10px;
+}
+
+.product-list tr:nth-child(2n) td:last-child{
+  border-radius: 0 10px 10px 0;
+}
+
+.product-list tr:nth-child(2n) {
+  background-color: #b7c3e4;
+}
+
+.product-list tr:nth-child(2n + 1) {
+  background-color: #ffffff;
+}
+
+.product-list td:last-child {
+  text-align: right;
+}
+
